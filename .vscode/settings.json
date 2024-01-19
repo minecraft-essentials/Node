@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "npm": true,
+        ".yarn": true,
+        ".cargo": true
+    }
+}

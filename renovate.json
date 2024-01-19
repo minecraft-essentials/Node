@@ -1,0 +1,20 @@
+{
+    "extends": ["config:base"],
+    "automerge": true,
+    "prCreation": "not-pending",
+    "schedule": ["every weekend"],
+    "packageRules": [
+      {
+        "matchDatasources": ["github"],
+        "matchPackageNames": ["*"],
+        "groupName": "npm dependencies",
+        "schedule": ["every weekend"]
+      },
+      {
+        "matchDatasources": ["github"],
+        "matchManagers": ["cargo"],
+        "groupName": "rust dependencies",
+        "schedule": ["every weekend"]
+      }
+    ]
+ }
