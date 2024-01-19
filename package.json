@@ -1,28 +1,21 @@
 {
   "name": "minecraft-essentials",
-  "version": "0.5.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.0.0",
+  "main": "/distindex.js",
+  "types": "/dist/index.d.ts",
   "napi": {
     "name": "minecraft-essentials",
     "triples": {
       "additional": [
         "aarch64-apple-darwin",
-        "aarch64-linux-android",
         "aarch64-unknown-linux-gnu",
         "aarch64-unknown-linux-musl",
         "aarch64-pc-windows-msvc",
-        "armv7-unknown-linux-gnueabihf",
-        "x86_64-unknown-linux-musl",
-        "x86_64-unknown-freebsd",
-        "i686-pc-windows-msvc",
-        "armv7-linux-androideabi",
-        "universal-apple-darwin",
-        "riscv64gc-unknown-linux-gnu"
+        "x86_64-unknown-linux-musl"
       ]
     }
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "devDependencies": {
     "@napi-rs/cli": "^2.17.0",
     "ava": "^5.1.1"
@@ -37,27 +30,9 @@
     "artifacts": "napi artifacts --dir ./dist",
     "build": "napi build --platform --release ./dist",
     "build:debug": "napi build --platform ./dist",
-    "prepublishOnly": "napi prepublish -t npm ./dist",
+    "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version"
-  },
-  "packageManager": "yarn@4.0.2",
-  "optionalDependencies": {
-    "minecraft-essentials-win32-x64-msvc": "0.0.0",
-    "minecraft-essentials-darwin-x64": "0.0.0",
-    "minecraft-essentials-linux-x64-gnu": "0.0.0",
-    "minecraft-essentials-darwin-arm64": "0.0.0",
-    "minecraft-essentials-android-arm64": "0.0.0",
-    "minecraft-essentials-linux-arm64-gnu": "0.0.0",
-    "minecraft-essentials-linux-arm64-musl": "0.0.0",
-    "minecraft-essentials-win32-arm64-msvc": "0.0.0",
-    "minecraft-essentials-linux-arm-gnueabihf": "0.0.0",
-    "minecraft-essentials-linux-x64-musl": "0.0.0",
-    "minecraft-essentials-freebsd-x64": "0.0.0",
-    "minecraft-essentials-win32-ia32-msvc": "0.0.0",
-    "minecraft-essentials-android-arm-eabi": "0.0.0",
-    "minecraft-essentials-darwin-universal": "0.0.0",
-    "minecraft-essentials-linux-riscv64-gnu": "0.0.0"
   }
 }
