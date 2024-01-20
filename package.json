@@ -1,6 +1,6 @@
 {
   "name": "minecraft-essentials",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "/dist/index.js",
   "types": "/dist/index.d.ts",
   "napi": {
@@ -17,8 +17,11 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@napi-rs/cli": "^2.17.0",
-    "ava": "^5.1.1"
+    "ava": "^5.1.1",
+    "husky": "^8.0.3"
   },
   "ava": {
     "timeout": "3m"
@@ -35,6 +38,7 @@
     "universal": "napi universal",
     "version": "napi version",
     "clean": "rm -rf ./dist && cargo clean",
-    "clean:build": "rm -rf ./dist && cargo clean && napi build --platform --release ./dist"
+    "clean:build": "rm -rf ./dist && cargo clean && napi build --platform --release ./dist",
+    "postinstall": "yarn dlx husky install"
   }
 }
