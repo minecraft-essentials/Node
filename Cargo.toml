@@ -9,7 +9,7 @@ crate-type = ["cdylib"]
 [dependencies]
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
 napi = { version = "2.16.2", default-features = false, features = ["napi4", "tokio"] }
-napi-derive = "2.15.0"
+napi-derive = "2.16.3"
 minecraft-essentials = {git = "https://github.com/minecraft-essentials/minecraft-essentials"}
 
 [build-dependencies]
